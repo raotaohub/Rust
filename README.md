@@ -47,3 +47,19 @@ crm test 测试
 crm best：自动换成国内最快的镜像（我这里是sjtu）
 crm publish：用官方源执行cargo publish（对于crate贡献者很有用，在开着镜像的时候不能publish）
 ```
+
+# 编译器属性标记
+
+https://course.rs/profiling/compiler/attributes.html
+
+- #![allow(unused_variables)]
+
+  > 属性标记，该标记会告诉编译器忽略未使用的变量，不要抛出 warning 警告,具体的常见编译器属性你可以在这里查阅
+  > !表示整个文件有效，可以去除表示只对当下块有效
+
+- #[allow(dead_code)]
+  ```rust
+  fn read(f: &mut File, save_to: &mut Vec<u8>) -> ! {
+  unimplemented!()
+  }
+  ```
