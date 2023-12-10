@@ -4,6 +4,7 @@
  */
 
 fn main() {
+    // read();
     let a = 20;
     println!("{}", add(a, a)); // 有分号
 
@@ -29,4 +30,8 @@ fn add(a: i8, b: i8) -> i8 {
 /* 永不反回 */
 fn forever(a: i8, b: i8) -> ! {
     loop {}
+}
+
+fn read() -> ! {
+    unimplemented!()
 }
