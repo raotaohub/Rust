@@ -128,7 +128,7 @@ println!("hello \\x52\\x75\\x73\\x74"); // hello \x52\x75\x73\x74
 
 ```
 
-## 元祖
+## 元祖 tup
 
 ### 声明语法
 
@@ -166,3 +166,19 @@ fn calculate_length(s:String) ->( String, usize){
     (s, len)
 }
 ```
+
+## 结构体 struct
+
+### 元组结构体(Tuple Struct)
+
+元组结构体在你希望有一个整体名称，但是又不关心里面字段的名称时将非常有用
+
+```rust
+
+struct Position (i32,f32)
+
+let pos = (100,300)
+
+```
+
+### 单元结构体(Unit-like Struct)
