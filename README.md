@@ -58,8 +58,12 @@ https://course.rs/profiling/compiler/attributes.html
   > !表示整个文件有效，可以去除表示只对当下块有效
 
 - #[allow(dead_code)]
+
   ```rust
   fn read(f: &mut File, save_to: &mut Vec<u8>) -> ! {
   unimplemented!()
   }
   ```
+
+- #[derive(Debug)]
+  > 打印结构体

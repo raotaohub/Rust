@@ -44,5 +44,22 @@ fn main() {
     /* 此时访问 user 会报错 */
     /* 但是可以访问其他所有权未被转移的字段 */
 
-    println!("{}", user1.age)
+    println!("{}", user1.age);
+    print_struct();
+}
+
+/* 打印结构体 */
+#[derive(Debug)]
+struct Rectangle {
+    height: u32,
+    width: u32,
+}
+
+fn print_struct() {
+    let rect1 = Rectangle {
+        height: 200,
+        width: 300,
+    };
+
+    println!("rect1:{:?}", rect1)
 }

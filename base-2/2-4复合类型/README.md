@@ -169,6 +169,17 @@ fn calculate_length(s:String) ->( String, usize){
 
 ## 结构体 struct
 
+```rust
+
+struct User {
+    name: String,
+    age: u32,
+}
+
+let pos = (100,300)
+
+```
+
 ### 元组结构体(Tuple Struct)
 
 元组结构体在你希望有一个整体名称，但是又不关心里面字段的名称时将非常有用
@@ -182,3 +193,21 @@ let pos = (100,300)
 ```
 
 ### 单元结构体(Unit-like Struct)
+
+TODO 不懂咋个意思
+https://course.rs/basic/compound-type/struct.html#%E5%8D%95%E5%85%83%E7%BB%93%E6%9E%84%E4%BD%93unit-like-struct
+
+```rust
+
+```
+
+### 结构体的所有权
+
+如果要在结构体中使用引用，则需要在使用引入声明周期的概念，否则报错。
+
+```diff
+struct User {
+-    name: String,
++    name: &str,
+}
+```
