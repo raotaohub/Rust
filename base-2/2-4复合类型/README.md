@@ -211,3 +211,16 @@ struct User {
 +    name: &str,
 }
 ```
+
+### 补充数组类型
+
+注意看这个逆天的数组类型声明 `[String;3]`
+
+```rust
+let str_arr : [String;3] = [
+    String::from("1"),
+    String::from("2"),
+    String::from("3"),
+]
+
+```
