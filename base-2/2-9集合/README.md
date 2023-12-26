@@ -40,3 +40,13 @@ println!("The first element is: {first}");
 ```
 
 ## 2. HashMap 哈希表集合
+
+1. use std::collections::HashMap;
+2. let mut map = HashMap::new();
+3. map.insert("key", "value");
+4. map.entries().or_insert("key", "value");
+
+## 3. Option<&T>的 2 个方法
+
+1. copied() 对实现 copy 特性的值进行 copy
+2. unwrap_or(default) 对没有值的**Option<&T>** 返回传入的默认值
