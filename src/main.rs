@@ -1,3 +1,5 @@
+use std::io;
+
 fn greet_world() {
     let chinese = "你好世界";
     let english = "hello world";
@@ -42,6 +44,12 @@ fn what_are_you_doing() {
             println!("名字--{},数字--:{}", name, length)
         }
     }
+
+    let mut myst = String::from("hello");
+
+    println!("{}", myst);
+
+    let _ = io::stdin().read_line(&mut myst).expect("没有用户输入");
 }
 
 fn main() {
